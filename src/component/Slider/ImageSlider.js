@@ -45,9 +45,9 @@ const ImageSlider = (
                 />
                 <img
                     className="imageSlider-large-image"
-                    src={`${baseUrl}/${image}/${index}.${suffix}`} width={340} height={340} />
+                    src={`${baseUrl}/${image}/${index}.${suffix}`} />
                 <img
-                    className="imageSlider-button"
+                    className="imageSlider-button right"
                     src={`${baseUrl}/${nextIcon}`}
                     onClick={() => handleClick(index+1)}
                 />

@@ -2,11 +2,15 @@
     display: inline-flex;
     position: relative;
     margin-right: 1.2rem;
+    height: 50%;
 
     .imageSlider-button {
         position: absolute;
         top: 50%;
         cursor: pointer;
+        &.right {
+            right: -40px;
+        }
     }
 
     .imageSlider-small-image {
@@ -23,5 +27,7 @@
     .imageSlider-large-image {
         margin-left: 1.2rem;
         border: 1px solid #EEEEEE;
+        width: 100%;
+        height: auto;
     }
 }

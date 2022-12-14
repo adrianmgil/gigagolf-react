@@ -8,7 +8,6 @@
 
 .efit-club-detail {
     margin: 0rem 1rem;
-    width: 50;
 
     .club-detail-title {
         font-weight: 900;
@@ -39,20 +38,20 @@
     .club-detail-customize {
         margin-top: 1.5rem;
         border: 1px solid #CCCCCC;
-        width: 400px;
-        height: 60px;
-        display: inline-flex;
+        max-width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1rem;
 
         > div {
             font-size: 0.7rem;
             width: 180px;
             height: 100%;
-            padding: 1rem;
         }
         button {
             color: #ffffff;
             background-color: #000000;
-            margin-top: 1rem;
+            margin: auto 0;
             border-radius: 1rem;
             height: 2rem;
             width: 160px;
@@ -83,10 +82,11 @@
 
 .shopping-buttons-wrapper {
     display: inline-grid;
+    width: 100%;
 
     button {
         margin: 0.5rem 0rem 0.5rem 0rem;
-        width: 400px;
+        max-width: 400px;
         height: 2rem;
         border-radius: 1rem;
         border: 1px solid #808080;
