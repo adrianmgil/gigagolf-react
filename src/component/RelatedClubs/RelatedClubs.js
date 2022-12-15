@@ -9,9 +9,9 @@ const ReleatedClubs = (
     baseUrl = BASE_URL,
     suffix = 'jpg',
 }) => {
-    const createClub = (c) => {
+    const createClub = (c, index) => {
         return (
-            <div key={c.clubs}>
+            <div key={c.clubs + '-' + index}>
                 <img src={`${baseUrl}/images/studio330/${c.groupNum.replace('-SET','')}/${1}.${suffix}`} width={48} />
                 <div className="gg-related-clubs-clubs" >{c.clubs}</div>
                 <div className="gg-related-clubs-price" >${c.price}</div>
@@ -27,8 +27,8 @@ const ReleatedClubs = (
     return (
         <Carousel>
             <div className="gg-related-clubs-wrapper">
-                {(clubs ?? []).map((c) =>
-                    createClub(c)
+                {(clubs ?? []).map((c, index) =>
+                    createClub(c, index)
                 )}
             </div>
         </Carousel>

@@ -1,21 +1,23 @@
+@import '../../constants.less';
+
 .gg-carousel-wrapper {
     display: inline-flex;
     width: 100%;
 
-    button {
-        height: 40px;
+    img {
+        height: 24px;
         font-size: 3rem;
-        border: none;
         background: transparent;
         margin: auto;        
     }
+    img:hover {
+        cursor: pointer;
+    }
 
-    button:disabled {
-        color: #CCCCCC;
-        img {
-            opacity: 0.2;
-            cursor: default;
-        }
+    img[disabled] {
+        color: @gray4;
+        opacity: 0.2;
+        cursor: default;
     }
 
     .gg-carousel-component {

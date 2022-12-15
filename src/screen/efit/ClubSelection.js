@@ -1,21 +1,22 @@
 import React from 'react'
+import Button from '../../component/Button/Button';
 
 const ClubSelection = () => {
 
     return (
         <div className="club-selection-wrapper">
-            <div>SELECT YOUR CLUB(S)</div>
+            <div className="club-selection-header">SELECT YOUR CLUB(S)</div>
             <div>
-                <button>Male</button>
-                <button>Female</button>
+                <Button onClick={() => console.log('test')}>Male</Button>
+                <Button>Female</Button>
             </div>
             <div>
-                <button>Left Hand</button>
-                <button>Right Hand</button>
+                <Button>Left Hand</Button>
+                <Button>Right Hand</Button>
             </div>
             <div>
-                <button>Steel</button>
-                <button>Graphite</button>
+                <Button>Steel</Button>
+                <Button>Graphite</Button>
             </div>
         </div>
     );

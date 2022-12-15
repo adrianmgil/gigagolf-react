@@ -30,13 +30,13 @@ const Carousel = (
 
     return (
         <div className="gg-carousel-wrapper">
-            <button onClick={() => handleRotate('left')} disabled={!position.left}><img src={`${baseUrl}/${leftArrow}`} /></button>
+            <img src={`${baseUrl}/${leftArrow}`} onClick={() => handleRotate('left')} disabled={!position.left}></img>
             <div ref={refContainer} className="gg-carousel-component">
                 <div ref={refComponent} style={{ transform: `translateX(${position.x}px)` }}>
                     {children}
                 </div>
             </div>
-            <button onClick={() => handleRotate('right')} disabled={!position.right}><img src={`${baseUrl}/${rightArrow}`} /></button>
+            <img src={`${baseUrl}/${rightArrow}`} onClick={() => handleRotate('right')} disabled={!position.right} />
         </div>
     );
 };
