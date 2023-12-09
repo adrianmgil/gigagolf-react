@@ -2,6 +2,7 @@ import React from "react";
 import { BASE_URL } from '../../constants';
 import Carousel from "../Carousel/Carousel";
 import './RelatedClubs.less';
+import { Navigate } from "react-router-dom";
 
 const ReleatedClubs = (
 {
@@ -9,6 +10,7 @@ const ReleatedClubs = (
     baseUrl = BASE_URL,
     suffix = 'jpg',
 }) => {
+    //const clubDetailUrl = BASE_URL + '/club_detailsHTML.jhtml?manufacturer=GigaGolf&groupnum=';
     const createClub = (c, index) => {
         return (
             <div key={c.clubs + '-' + index}>

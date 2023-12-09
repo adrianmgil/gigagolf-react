@@ -12,7 +12,7 @@ const ImageSlider = (
         nextIcon = NEXT_ICON,
     }) => {
 
-    const [index, setIndex] = useState(1    );
+    const [index, setIndex] = useState(1);
 
     const handleClick = useCallback(
         (newValue) => {

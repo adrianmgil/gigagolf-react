@@ -4,7 +4,7 @@ import './button.less';
 
 const Button = (props) => {
     return (
-        <div {...props} className={`gg-button ${props.className}`}>
+        <div {...props} className={`gg-button ${props.className ?? ''}`}>
             {props.children}
         </div>
     );

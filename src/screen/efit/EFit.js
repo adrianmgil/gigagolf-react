@@ -1,103 +1,15 @@
 import GGNav from "../../component/GGNav";
+import { mockEfit } from "../../mocks/efit";
 import Header from "../header/Header";
 import Club from "./Club";
 import ClubDetail from "./ClubDetail";
 import './efit.less';
 
 const efit = () => {
-    const data = {
-        name: 'TRX Power Slot Irons',
-        manufacturer: 'GigaGolf',
-        groupnum: 'MI-GGTM19-SET',
-        price: 197.75,
-        numOfClubs: 6,
-        description: `Epic Speed will change the industry forever with a simple equation that creates a profound impact on driver technology and performance. We're just making`,
-        rating: 4.5,
-        numOfReviews: 153,
-        relatedClubs: [
-            {
-                groupNum: 'MI-GGTM18-SET',
-                clubs: '5 thru PW',
-                price: 100.0,
-                description: `Men's Regular Steel Shaft`,
-                isStock: true,
-            },
-            {
-                groupNum: 'MI-GGTM19-SET',
-                clubs: '5 thru PW',
-                price: 100.0,
-                description: `Men's Regular Steel Shaft`,
-                isStock: true,
-            },
-            {
-                groupNum: 'MI-GGPG18-SET',
-                clubs: '5 thru PW',
-                price: 100.0,
-                description: `Men's Regular Steel Shaft`,
-                isStock: true,
-            },
-            {
-                groupNum: 'MI-GGTM20-SET',
-                clubs: '5 thru PW',
-                price: 100.0,
-                description: `Men's Regular Steel Shaft`,
-                isStock: true,
-            },
-            {
-                groupNum: 'MI-GGTM19-SET',
-                clubs: '5 thru PW',
-                price: 100.0,
-                description: `Men's Regular Steel Shaft`,
-                isStock: true,
-            },
-            {
-                groupNum: 'MI-GGTM16-SET',
-                clubs: '5 thru PW',
-                price: 100.0,
-                description: `Men's Regular Steel Shaft`,
-                isStock: true,
-            },
-            {
-                groupNum: 'MI-GGPT01-SET',
-                clubs: '5 thru PW',
-                price: 100.0,
-                description: `Men's Regular Steel Shaft`,
-                isStock: true,
-            },
-            {
-                groupNum: 'MI-GGPT02-SET',
-                clubs: '5 thru PW',
-                price: 100.0,
-                description: `Men's Regular Steel Shaft`,
-                isStock: true,
-            },
-            {
-                groupNum: 'MI-GGPT04-SET',
-                clubs: '5 thru PW',
-                price: 100.0,
-                description: `Men's Regular Steel Shaft`,
-                isStock: true,
-            },
-            {
-                groupNum: 'UT-GGTM18-SET',
-                clubs: '5 thru PW',
-                price: 100.0,
-                description: `Men's Regular Steel Shaft`,
-                isStock: true,
-            },
-            {
-                groupNum: 'UT-GGPG06-SET',
-                clubs: '5 thru PW',
-                price: 100.0,
-                description: `Men's Regular Steel Shaft`,
-                isStock: true,
-            },
-        ],
-    };
+    const data = mockEfit;
 
     return (
         <>
-            <Header />
             <GGNav />
             <div className="efit-club">
                 <Club groupnum={data.groupnum} />

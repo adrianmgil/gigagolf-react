@@ -46,24 +46,11 @@
         flex-wrap: wrap;
         padding: 1rem;
 
-        > div {
+        > div:first-child {
             font-size: 0.7rem;
             width: 180px;
             height: 100%;
             margin-bottom: 8px;
-        }
-        .gg-round-button {
-            font-size: 0.8rem;
-            color: white;
-            background-color: black;
-            width: 160px;
-            line-height: 1.5rem;
-            margin: auto 0;
-            max-width: 160px;
-        }
-
-        button:hover {
-            background-color: @gray4;
         }
     }
 }
@@ -80,7 +67,7 @@
 
     .gg-button {
         font-size: 0.6rem;
-        max-width: 120px;
+        max-width: 140px;
         min-width: 60px;
         color: @gray2;
     }
@@ -89,16 +76,4 @@
 .shopping-buttons-wrapper {
     display: inline-grid;
     width: 100%;
-
-    .gg-round-button {
-        height: 1.5rem;
-        line-height: 1.5rem;
-    }
-    .gg-round-button:first-child:hover, .gg-round-button:last-child:hover {
-        background-color: @gray4;
-    }
-    .gg-round-button:last-child {
-        color: white;
-        background-color: black;
-    }
 }
