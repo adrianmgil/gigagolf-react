@@ -1,0 +1,94 @@
+.settings {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding-top: 2rem;  
+  background-color: black;
+  margin: 0rem;
+  height: calc(100vh);
+  height: calc(var(--windowHeight) - var(--keyboardHeight) - 2rem);
+  width: calc(100% - 1rem);
+  width: calc(var(--windowWidth) - 0rem);
+  display: flex;
+  flex-direction: column;
+}
+.settings {
+    background-color: #BBBBBB;
+}
+
+.settings .fieldRow {
+    display: flex;
+    padding: 1rem;
+    font-weight: 600;
+    width: auto;
+    align-items: center;
+}
+.settings .fieldRow > label {
+    width: 180px;
+}
+.settings .fieldRow .component {
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+.settings-buttonClose {
+    position: initial;    
+    bottom: 2rem;
+    width: 60%;
+    max-width: 300px;
+    margin: 4rem auto;
+}
+
+/* SLIDER */
+.color-theme-dark .settings, .color-theme-dark .ant-slider-mark-text, .color-theme-light .ant-slider-step, .color-theme-light .ant-slider-dot {
+  background-color: black;
+  color:white;
+}
+
+.color-theme-light .settings, .color-theme-light .ant-slider-mark-text, .color-theme-dark .ant-slider-step, .color-theme-dark .ant-slider-dot {
+  background-color: white;
+  color:black;
+}
+.settings .ant-slider-mark {
+    top: 1rem;
+}
+.settings :where(.css-dev-only-do-not-override-i19pbt).ant-slider .ant-slider-dot {
+    display: none;
+}
+.settings :where(.css-dev-only-do-not-override-i19pbt).ant-slider-horizontal .ant-slider-handle {
+    z-index: 1;
+}
+.settings .ant-slider-handle::after,
+.settings .ant-slider-handle-checked:hover:not(.ant-slider-handle-disabled)::after,
+.settings .ant-slider-handle:focus:not(.ant-slider-handle-disabled)::after {
+    box-shadow: none !important;
+    width: 16px !important;
+    height: 16px !important;
+    inset-inline-start: -4px !important;
+    outline: none !important;
+    inset-block-start: -3px !important;
+    background-color: black;
+}
+.color-theme-dark .settings .ant-slider-handle::after,
+.color-theme-dark .settings .ant-slider-handle-checked:hover:not(.ant-slider-handle-disabled)::after,
+.color-theme-dark .settings .ant-slider-handle:focus:not(.ant-slider-handle-disabled)::after {
+    background-color: white;
+}
+
+/* SWITCH */
+.settings .ant-switch, .settings .ant-switch-checked:hover:not(.ant-switch-disabled) {
+    background-color: #BBBBBB;
+}
+.settings .ant-switch {
+    width: 50px;
+}
+
+/* COLOR PICKER */
+.settings  :where(.css-dev-only-do-not-override-i19pbt).ant-color-picker-trigger {
+    background-color: transparent;
+    border: none;
+}
+.settings .ant-color-picker-color-block, .settings .ant-color-picker-trigger {
+    width: 70%;
+    justify-content: flex-start;
+}

@@ -1,0 +1,120 @@
+body {
+  margin: 0px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body .color-theme-dark {
+  background-color: black;
+  color:white;
+}
+
+body .color-theme-light {
+  background-color: white;
+  color:black;
+}
+
+.App {
+  padding: 0.3rem;
+  font-size: 18px;
+  width: calc(var(--windowWidth) - 0.6rem);
+  position: relative;
+  touch-action: none;
+}
+
+.force-mobile-wrapper2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.color-theme-dark div[contenteditable] {
+  border-color: var(--colorText, --colorTextDefault);
+  color:white;
+}
+.color-theme-light div[contenteditable] {
+  border-color: lightgray;
+  color:black;
+}
+
+.contentEditors {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 4rem);
+  height: calc(var(--windowHeight) - var(--keyboardHeight) - 4rem);
+}
+
+div[contenteditable] {
+  min-height: 100px;
+  flex-grow: 1;
+  background-color: transparent;
+  display: block;
+  width: stretch;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-width: 0.2rem;
+  border-style: solid;
+  white-space: pre-line;
+}
+div[contenteditable]:focus {
+  outline: solid 2px var(--colorText, --colorTextDefault);;
+}
+
+.resizable-line {
+  height: 5px;
+  margin: 0rem 0.5rem;
+  position: relative;
+  border-bottom-width: 1px; 
+}
+.resizable-line:hover {
+  background-color: var(--colorText, --colorTextDefault);
+}
+
+.resizable-line::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  bottom: -10px;      /* Matches the thickness of your border */
+  height: 20px;
+  cursor: ns-resize;
+}
+
+span[contenteditable].stopListening {
+  opacity: 0.9;
+}
+
+.bottomBar {
+  padding: 0.5rem 1rem;
+  display: inline-flex;
+  width: stretch;
+}
+
+button {
+  height: 2rem;
+  margin: 0rem 1rem;
+  padding: 0.25rem 0.5rem;
+  width: fit-content;
+  border-radius: 0.5rem;
+  font-size: 14px;
+  border: solid 2px var(--colorText, --colorTextDefault);
+  background-color: white;
+  color: var(--colorText, --colorTextDefault);
+  font-weight: 600;
+}
+
+.color-theme-dark button {
+  background-color: var(--colorText, --colorTextDefault);
+  color: white;
+  border-color: #444444;
+}
+
+.buttonFullscreen {
+  margin-left: auto;
+}
+
+.buttonClear {
+  position: absolute;
+  right: 1rem;
+  scale: 1;
+}

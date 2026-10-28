@@ -1,0 +1,9 @@
+.text-highlight {
+  background-color: var(--colorHighlight, #FFFFB0);
+  display: inline-block;
+}
+
+.color-theme-dark .text-highlight {
+  background-color: transparent;
+  color: #FFFFB0;
+}
